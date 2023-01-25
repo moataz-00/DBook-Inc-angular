@@ -1,0 +1,81 @@
+<body>
+  <h1 class="text-center  text-success">
+    CREATE - STUDENT
+  </h1>
+
+<div class="container">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label text-success">NAME</label>
+    <input  type="text" [(ngModel)]="student.name"
+    required
+minlength="4"
+maxlength="20"
+    #studentname="ngModel"
+    
+    class="form-control" >
+    <div *ngIf="studentname.touched&&studentname.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">PHONE</label>
+    <input type="text" [(ngModel)]="student.phone"
+    required
+minlength="11"
+maxlength="15"
+    #studentphone="ngModel"
+
+    class="form-control">
+    <div *ngIf="studentphone.touched&&studentphone.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">AGE</label>
+    <input type="number"[(ngModel)]="student.age"
+    required
+    #studentage="ngModel"
+    class="form-control" id="exampleInputPassword1">
+    <div *ngIf="studentage.touched&&studentage.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">Course</label>
+    <input type="text"[(ngModel)]="student.course"
+    required
+minlength="2"
+maxlength="20"
+    #studentcourse="ngModel"
+    class="form-control" id="exampleInputPassword1">
+    <div *ngIf="studentcourse.touched&&studentcourse.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">IMAGE</label>
+    <input type="url"[(ngModel)]="student.imgUrl"
+    required
+minlength="4"
+
+    #studentimg="ngModel"
+    class="form-control " id="exampleInputPassword1">
+    <div *ngIf="studentimg.touched&&studentimg.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+<div *ngIf="studentname.valid&&studentage.valid&&studentphone.valid&&studentimg.valid&&studentcourse.valid">
+  <a href="student-register" (click)="submit()" type="submit" class="btn btn-outline-success">Submit</a>
+</div>
+
+
+
+</div>
+</body>
+

@@ -1,0 +1,24 @@
+<body >
+
+
+  <h1 class="text-center text-success">DETAILS</h1>
+  <div class="container col-md-4 mt-5 pt-5"  data-aos="zoom-in" data-aos-delay="100">
+  <div class=" card border-success mb-3">
+
+      <div class="body-header">
+        <img width="100%" [src]="teacher.imgUrl" class="imf-fluid img-top">
+      </div>
+      <div class="card-body">
+        <h6>Name: {{teacher.name}}</h6>
+        <h6>Phone: {{teacher.phone}}</h6>
+        <h6>Age: {{teacher.age}}</h6>
+        <h6>Course: {{teacher.course}}</h6>
+        <h6>Salary: {{teacher.salary}}</h6>
+    </div>
+  </div >
+  <div class="text-center py-3"><a class="btn btn-outline-success "routerLink="/show-teachers">GO TO BACK</a>
+  </div>
+  </div>
+  </body>
+
+

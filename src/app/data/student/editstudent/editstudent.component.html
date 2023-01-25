@@ -1,0 +1,45 @@
+
+
+<body>
+  <h1 class="text-center  text-success">
+    UPDATE -STUDENT
+  </h1>
+
+  <div class="container">
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label text-success">NAME</label>
+      <input type="text" [(ngModel)]="student.name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label text-success">PHONE</label>
+      <input type="text" [(ngModel)]="student.phone" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label text-success">AGE</label>
+      <input type="number"[(ngModel)]="student.age" class="form-control" id="exampleInputPassword1">
+    </div>
+
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label text-success">Course</label>
+      <input type="text" [(ngModel)]="student.course" class="form-control" id="exampleInputPassword1">
+    </div>
+
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label text-success">IMAGE</label>
+      <input type="url"[(ngModel)]="student.imgUrl" class="form-control" id="exampleInputPassword1">
+    </div>
+
+
+
+    <button (click)="submit()" type="submit" class="btn btn-outline-success">Submit</button>
+
+  </div>
+</body>
+
+
+

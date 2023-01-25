@@ -1,0 +1,91 @@
+<body>
+  <h1 class="text-center  text-success">
+    CREATE - TEACHER
+  </h1>
+
+<div class="container">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label text-success">NAME</label>
+    <input  type="text" [(ngModel)]="teacher.name"
+    required
+    minlength="4"
+    maxlength="15"
+    #teachername="ngModel"
+
+    class="form-control" >
+    <div *ngIf="teachername.touched&&teachername.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">PHONE</label>
+    <input type="text" [(ngModel)]="teacher.phone"
+    required
+    minlength="11"
+    maxlength="15"
+    #teacherphone="ngModel"
+    class="form-control" id="exampleInputPassword1">
+    <div *ngIf="teacherphone.touched&&teacherphone.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">AGE</label>
+    <input type="number"[(ngModel)]="teacher.age" class="form-control"
+    required
+
+    #teacherage="ngModel"
+    id="exampleInputPassword1">
+    <div *ngIf="teacherage.touched&&teacherage.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">Course</label>
+    <input type="text"[(ngModel)]="teacher.course" class="form-control"
+    required
+    minlength="2"
+    maxlength="20"
+    #teachercourse="ngModel"
+    id="exampleInputPassword1">
+    <div *ngIf="teachercourse.touched&&teachercourse.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">Salary Expected</label>
+    <input type="text"[(ngModel)]="teacher.salary" class="form-control"
+    required
+    minlength="4"
+    maxlength="5"
+    #teachersalaryexpected="ngModel"
+    id="exampleInputPassword1">
+    <div *ngIf="teachersalaryexpected.touched&&teachersalaryexpected.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">IMAGE</label>
+    <input type="url"[(ngModel)]="teacher.imgUrl" class="form-control "
+    required
+    #teacherimg="ngModel"
+    id="exampleInputPassword1">
+    <div *ngIf="teacherimg.touched&&teacherimg.invalid" class="alert alert-danger">
+      INVALID
+    </div>
+  </div>
+
+<diV *ngIf="teachername.valid&&teacherage.valid&&teacherphone.valid&&teacherimg.valid&&teachercourse.valid&&teachersalaryexpected.valid">
+  <a href="teacher-register" (click)="submit()" type="submit" class="btn btn-outline-success">Submit</a></diV>
+
+
+
+</div>
+</body>
+

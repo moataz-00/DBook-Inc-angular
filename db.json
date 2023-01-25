@@ -1,0 +1,30 @@
+{
+  "student": [
+    {
+      "name": "taha",
+      "phone": "01114869800",
+      "age": 20,
+      "course": "web",
+      "imgUrl": "https://pps.whatsapp.net/v/t61.24694-24/294349825_547837997121386_906292133502688801_n.jpg?ccb=11-4&oh=01_AdRr8vNwEZAv7UkHIzRhvfpQ_mqdojre4eSAXPRdpEkk5g&oe=63DE1A10",
+      "id": 1
+    }
+  ],
+  "teacher": [
+    {
+      "name": "Mahmoud",
+      "phone": "01000789504",
+      "age": 21,
+      "course": "AI",
+      "salary": "30000",
+      "imgUrl": "https://pps.whatsapp.net/v/t61.24694-24/307314675_752498095837090_6962693329803026138_n.jpg?ccb=11-4&oh=01_AdTWIPzNyk2e7rrtqJYS_7zhKOyh3cjttireNDAsh6nl1w&oe=63DE2919",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "ahmed",
+      "pass": 123
+    }
+  ]
+}

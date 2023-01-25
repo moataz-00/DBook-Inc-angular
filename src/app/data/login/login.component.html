@@ -1,0 +1,25 @@
+<body>
+  <h1 class="text-center  text-success">
+    LOGIN
+  </h1>
+
+<div class="container">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label text-success">USER NAME  <span class="text-danger">{{error}}</span></label>
+    <input type="text" [(ngModel)]="name"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label text-success">PASSWORD  <span class="text-danger">{{error}}</span></label>
+    <input type="number" [(ngModel)]="pass" class="form-control" id="exampleInputPassword1">
+  </div>
+
+
+
+
+
+  <button (click)="login()" type="submit" class="btn btn-success">Submit</button>
+
+</div>
+</body>

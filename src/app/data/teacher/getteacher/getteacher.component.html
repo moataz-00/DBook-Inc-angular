@@ -1,0 +1,46 @@
+<body class="text-center">
+
+  <div class="container  col-md-6">
+ <h1 class="text-center text-success">List - TEACHER </h1>
+
+     <table class="table  mt-5">
+       <tr>
+         <th>#</th>
+         <th>id</th>
+         <th>NAME</th>
+         <th>ACTION</th>
+
+
+       </tr>
+       <hr width="1555%">
+
+
+         <tr *ngFor="let data of alldata;let i=index">
+           <th>{{i+1}}</th>
+           <th>{{data.id}}</th>
+           <th>{{data.name}}</th>
+
+           <th><div class="dropdown">
+             <button class="btn btn-success " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i class="fa-solid fa-ellipsis"></i>
+             </button>
+             <ul  class="dropdown-menu">
+               <li><a class="dropdown-item" href="/show-teacher/{{data.id}}" ><i class="fa-solid fa-circle-info"> </i>&nbsp; Show</a></li>
+               <li><a class="dropdown-item"  routerLink="/edit-teacher/{{data.id}}"><i class="fa-solid fa-pen-to-square"></i>&nbsp; Edit</a></li>
+               <li><a class="dropdown-item text-danger"(click)="ondelete(data.id)" ><i class="fa-solid fa-trash"></i>&nbsp; Delete</a></li>
+
+             </ul>
+           </div></th>
+
+       </tr>
+     </table>
+<div *ngIf="alldata.length==0" class="alert alert-danger text-center">
+ NO DATA IN API
+</div>
+<hr>
+<div class="text-center pt-5 "><a  href="show-students" class="btn btn-outline-success fs-5">TO STUDENTS&nbsp;&nbsp;<i class='bx bx-book' ></i></a></div>
+</div>
+
+</body>
+
+
